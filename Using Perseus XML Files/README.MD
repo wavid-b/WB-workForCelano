@@ -4,13 +4,19 @@ DictFunctions - has funcitonality of the data
 
 In progress -
     Split the parses between greek and latin: they do not have a lang_id tag, so originally files created with them together
+
+    Mood "u" found that isn't listed in the morph_code parsing doc
+
+    Split adj output dict entries based on type of adj? i.e. celer, celeris is different than magnus, magna, magnum
+
+    need to find easy was to differentiate between deponent verbs and impersonal verbs
+        current fix: impersonal won't have first person passive indicative form, so check for that
+
+    make edge case for semi-deponent verbs 
     
-    Parse the part of speech information tags in parses
+    figure out way to check for the prefixes on verbs -> co, prae, etc.
 
-    Create better output than a list of words associated. Discuss options w/Celano
-        make a "words" class with children for each part of speech. Have each word object have the complete parse and dictionary entry, as well as gender. Create the word objects for each ID, then fetch them from a table when a user needs it
+    code refactor option - Get FPP from the "lemmas" CSV, then 
 
-        Create functions that do transformations using prexisting objects in python. This is a more simple approach, but may be more efficent as well. Encapsulation may be unnecessary here. 
-
-    Create other functionalities as need (i.e. gender of input word, only output if certain part of speech)
-
+    issue: words like "insigne" look like they have an enclitic but don't. Need to make new way to catch enclitics -> maybe in the make-csv process
+        Being fixed in first function of dfmanip.ipynb
