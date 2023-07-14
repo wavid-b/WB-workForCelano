@@ -16,7 +16,9 @@ In progress -
     
     figure out way to check for the prefixes on verbs -> co, prae, etc.
 
-    code refactor option - Get FPP from the "lemmas" CSV, then 
+    code refactor option - Get FPP from the "lemmas" CSV
 
-    issue: words like "insigne" look like they have an enclitic but don't. Need to make new way to catch enclitics -> maybe in the make-csv process
-        Being fixed in first function of dfmanip.ipynb
+    Add checker that we aren't doing ID's that are only in GRK 
+Need to grab FPP from lemmas if not found in parses - i.e. Conflagro (to burn) is in lemmas but not parses - done
+
+New way to fix enclitics: just use smallest word that fits criteria - WORKS!
